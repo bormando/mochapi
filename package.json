@@ -1,0 +1,16 @@
+{
+  "name": "mochapi",
+  "version": "1.0.0",
+  "description": "API test automation with Mocha and Axios",
+  "scripts": {
+    "test": "npx mocha src/specs"
+  },
+  "keywords": [],
+  "author": "Dmitriy Bormotov",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.21.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
