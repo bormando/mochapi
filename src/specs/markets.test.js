@@ -20,7 +20,6 @@ describe('price data', () => {
 
     it('values should be numbers', () => {
         for (const value of data.data) {
-            console.log(value);
             assert.isNumber(value, `value '${value}' is not a number`);
         }
     });
