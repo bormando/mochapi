@@ -4,7 +4,7 @@ const assert = require('chai').assert;
 describe('price data', () => {
     let data;
     before(async () => {
-        await axios.get('https://api.bitfinex.com/v1/pubticker/btcusd')
+        await axios.get('https://api-pub.bitfinex.com/v2/ticker/tBTCUSD')
             .then((response) => {
                 data = response;
             });
@@ -14,13 +14,13 @@ describe('price data', () => {
         assert.equal(data.status, 200, 'the response code is not 200');
     });
 
-    it('contains 8 values', () => {
-        assert.equal(Object.keys(data.data).length, 8, 'number of values is not 8');
+    it('contains 10 values', () => {
+        assert.equal(Object.keys(data.data).length, 10, 'number of values is not 10');
     });
 
-    it('values should be strings', () => {
+    it('values should be numbers', () => {
         for (const [key, value] of Object.entries(data.data)) {
-            assert.isString(value, `value of key '${key}' is not a string`);
+            assert.isNumber(value, `value of key '${key}' is not a number`);
         }
     });
 });
