@@ -3,6 +3,7 @@ const assert = require('chai').assert;
 
 describe('price data', () => {
     let data;
+
     before(async () => {
         await axios.get('https://api-pub.bitfinex.com/v2/ticker/tBTCUSD')
             .then((response) => {
@@ -15,7 +16,7 @@ describe('price data', () => {
     });
 
     it('contains 10 values', () => {
-        assert.equal(Object.keys(data.data).length, 10, 'number of values is not 10');
+        assert.equal(data.data.length, 10, 'number of values is not 10');
     });
 
     it('values should be numbers', () => {
