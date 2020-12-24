@@ -6,7 +6,7 @@
     "test": "npx mocha src/specs"
   },
   "keywords": [],
-  "author": "Dmitriy Bormotov",
+  "author": "Dmitrii Bormotov",
   "license": "ISC",
   "devDependencies": {
     "axios": "^0.21.0",
