@@ -1,5 +1,5 @@
-const axios = require('axios');
-const assert = require('chai').assert;
+import axios from 'axios';
+import { assert } from 'chai';
 
 describe('price data', () => {
     let data;

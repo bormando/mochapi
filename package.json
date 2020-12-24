@@ -1,14 +1,19 @@
 {
   "name": "mochapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API test automation with Mocha and Axios",
   "scripts": {
-    "test": "npx mocha src/specs"
+    "test": "npx mocha --require @babel/register src/specs"
   },
   "keywords": [],
   "author": "Dmitrii Bormotov",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
     "axios": "^0.21.0",
     "chai": "^4.2.0",
     "mocha": "^8.2.1"
